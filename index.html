@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width: device-width, initial-scale=1.0">
+    <title>Portada UTA</title>
+    <link rel="stylesheet" href="UTA.css"> 
+    <style>
+        body {
+            background-color: #E0E0E0;  
+            margin: 0;
+            height: 100vh; 
+        }
+
+        .container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;  
+            background-color: #D32F2F; 
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        h1 {
+            color: white;  
+            font-size: 5rem;
+            margin: 0;
+        }
+
+        h2 {
+            color: white; 
+            font-size: 2rem;
+            margin: 0;
+        }
+
+        .logo {
+            max-width: 100px;  
+        }
+
+        .content {
+            margin-top: 40px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);  
+            gap: 15px;
+            margin-top: 40px;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cell {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgb(0, 0, 0);
+            font-size: 1.2rem;
+            text-align: center;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .cell-title {
+            background-color: #FF5722;
+            cursor: pointer;
+        }
+
+        .cell-title:hover {
+            transform: scale(1.05);
+            background-color: #E64A19;
+        }
+        .cell.static {
+            background-color: #BDBDBD;
+            cursor: default;
+        }
+
+        .section-title {
+            width: 100%;
+            background-color: #D32F2F;
+            color: white;
+            font-size: 1.5rem;
+            padding: 10px 0;
+            text-align: center;
+            border-radius: 10px;
+        }
+        .cell-laboratorio {
+            height: 50px; 
+        }
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div>
+                <h1>UTA</h1>
+                <h2>Universidad Técnica de Ambato</h2>
+            </div>
+            <img class="logo" src="2/logo.png" alt="Universidad Técnica de Ambato"> 
+        </div>
+
+        <div class="content">
+            <p id="p1">FACULTAD DE INGENERIA DE SISTEMAS EN INDUSTRIAL</p>
+        </div>
+        <div class="grid-container">
+            <a href="Carreras.html">
+                <div class="section-title cell-title">Carreras</div>
+            </a>
+
+            <div class="cell static">Ingeniería en Sistemas</div>
+            <div class="cell static">Ingeniería Industrial</div>
+            <div class="cell static">Ingeneria de Redes</div>
+            <a href="Encargados.html">
+                <div class="section-title cell-title">Encargados/Administradores</div>
+            </a>
+            <div class="cell static cell-laboratorio">Ing. Telecomunicaciones</div>
+            <div class="cell static cell-laboratorio">Ing. Industrial</div>
+            <div class="cell static cell-laboratorio">Ing. Redes industriales </div>
+        </div>
+    </div>
+</body>
+</html>

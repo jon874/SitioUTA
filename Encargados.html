@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width: device-width, initial-scale=1.0">
+    <title>Carreras - UTA</title>
+    <style>
+        body {
+            background-color: #E0E0E0;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            background-color: #D32F2F;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        h1 {
+            color: white;
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        .button {
+            margin-top: 20px;
+            background-color: #FF5722;
+            padding: 10px 20px;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+
+        .button:hover {
+            background-color: #E64A19;
+        }
+
+        .details {
+            display: none;
+            background-color: #F5F5F5;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            text-align: left;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            align-items: center;
+        }
+
+        .details img {
+            max-width: 150px;
+            margin-right: 20px;
+        }
+
+        .section {
+            margin-top: 40px;
+        }
+
+    </style>
+    <script>
+
+        function toggleDetails(carrera) {
+            var details = document.getElementById(carrera);
+            if (details.style.display === "none" || details.style.display === "") {
+                details.style.display = "flex"; 
+            } else {
+                details.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <h1>Carreras</h1>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <div class="button" onclick="toggleDetails('sistemas')">Ing. Telecomunicaciones</div>
+            <div class="details" id="sistemas">
+                <img src="2/Telecomunciaciones.jpg" alt="Ingeniería en Telecomunciaciones"> 
+                <div>
+                    <p>El Ingeniero en Telecomunicaciones puede encargarse de diseñar, implementar y 
+                        mantener las redes locales (LAN) y las redes de área amplia (WAN) que conectan las computadoras y otros dispositivos dentro de los laboratorios y en toda la universidad.</p>
+                        <p>Aseguran que los laboratorios y otros espacios de la universidad tengan acceso a internet de manera confiable y con la mejor configuración posible.</p>  
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="button" onclick="toggleDetails('industrial')">Ing. Industrial</div>
+            <div class="details" id="industrial">
+                <img src="2/Industrial2.jpg" alt="Ingeniería Industrial"> 
+                <div>
+                    <p> El Ingeniero Industrial puede encargarse de optimizar los procesos dentro de los laboratorios, 
+                        asegurando que los recursos (como equipos de cómputo, personal, y materiales) se utilicen de manera eficiente. </p>
+                        <p>Tambien se encarga de mejorar la distribución de los equipos y las áreas dentro de los laboratorios para hacer un uso más eficiente del espacio.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="button" onclick="toggleDetails('electronica')">Ing. Redes industriales</div>
+            <div class="details" id="electronica">
+                <img src="2/Redes industriales.jpg" alt="Redes industriales"> 
+                <div>
+                    <p>Establecer redes de comunicación para la interconexión de dispositivos, sensores, 
+                        actuadores, y sistemas de control en fábricas o instalaciones industriales. Esto incluye redes como Ethernet/IP, Profinet, Modbus, entre otras.</p>
+                        <p>El Ingeniero en Redes Industriales se encarga de asegurar los sistemas de control y las redes de comunicación estén completamente integrados, lo que permite un flujo de trabajo fluido y eficiente.</p>
+                </div>
+            </div>
+        </div>
+        <a href="index.html">
+            <div>Volver</div>
+        </a>
+</body>
+</html>
