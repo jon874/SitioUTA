@@ -1,0 +1,9 @@
+@font-face {
+    font-family:"Regular" ;
+    src: url(/Poryecto/1/NanumMyeongjo-Regular.ttf);
+}
+#p1{
+    font-family:"Regular" ;
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+}
