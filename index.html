@@ -1,0 +1,157 @@
+ m <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portada UTA</title>
+    <link rel="stylesheet" href="UTA.css"> 
+    <style>
+        body {
+    background-image: url("2/uta.jpg");
+    background-size: 1500px 1000px; 
+    background-repeat: no-repeat;
+    background-position: center;
+}
+ 
+        .container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;  
+            border: 5px solid rgb(66, 0, 128);
+            background-color: #D32F2F; 
+            padding: 20px;
+            border-radius: 20px 70px;
+            outline: 2px double #e72727;
+            outline-offset: 15px;
+            transition: transform 1s ease-in-out;
+        }
+            .header:hover {
+    transform: rotate(5deg);
+}
+        h1 {
+            color: #ffffff;  
+            font-size: 5rem;
+            margin: 0;
+        }
+
+        h2 {
+            color: #E0E0E0; 
+            font-size: 2rem;
+            margin: 0;
+        }
+        h3{
+            color: #dadada;
+            font-size: 0.6cm;
+            text-align: center;
+            margin: 30px;
+            padding: 20px;
+            border: 1px solid;
+            box-shadow: rgb(150, 150, 150) 5PX 5PX 20px 10px;
+
+        }
+        h4{
+            font-size: 2rem;
+            color: #ffffff;
+            text-align: center;
+        }
+        .logo {
+            max-width: 100px;  
+        }
+        .content {
+            margin-top: 40px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);  
+            gap: 15px;
+            margin-top: 40px;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cell {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgb(0, 0, 0);
+            font-size: 1.2rem;
+            text-align: center;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .cell-title {
+            background-color: #D32F2F;
+            cursor: pointer;
+            color: white;
+            font-size: 1.5rem;
+            padding: 10px 0;
+            border-radius: 10px;
+        }
+
+        .cell-title:hover {
+            transform: scale(1.05);
+            background-color: D32F2F;
+            background:-webkit-linear-gradient(45deg, rgb(5, 28, 236), #c90f0f);
+        }
+
+        .cell.static {
+            background-color: #D32F2F;
+            cursor: default;
+            text-align: center;
+            border: 5px solid rgb(0, 0, 0);
+            border-radius: 20px / 70px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+        .back-button:hover {
+            size: 5rem;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div>
+                <h1>UTA</h1>
+                <h2>Universidad Técnica de Ambato</h2>
+            </div>
+           <img class="logo" src="2/logo.png" alt="Universidad Técnica de Ambato"> 
+        </div>
+
+        <div class="content">
+            <h3>FACULTAD DE INGENERIA DE SISTEMAS EN INDUSTRIAL</h3>
+        </div>
+
+        <div class="grid-container">
+            <a href="Carreras.html">
+                <div class="cell-title">Carreras</div>
+            </a>
+
+            <div class="cell static">Ingeniería en Sistemas</div>
+            <div class="cell static">Ingeniería Industrial</div>
+            <div class="cell static">Ingeniería de Redes</div>
+            
+            <a href="Encargados.html">
+                <div class="cell-title">Encargados/Administradores</div>
+            </a>
+            <div class="cell static">Ing. Telecomunicaciones</div>
+            <div class="cell static">Ing. Industrial</div>
+            <div class="cell static">Ing. Redes Industriales</div>
+        </div>
+    </div>
+    <a href="Estilos.html">
+        <h4 class="text-align center"> <div class="back-button"> Estilos</div></h4>
+    </a>
+</body>
+</html>

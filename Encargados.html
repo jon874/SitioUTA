@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Encargados - UTA</title>
+    <style>
+        body {
+            background-color: #E0E0E0;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url("2/uta.jpg"); 
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            background-color: #D32F2F;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        h1 {
+            color: white;
+            font-size: 3rem;
+            margin: 0;
+            border-color:rgb(29, 255, 59);
+            border-style: dotted ;
+            border-width: 2px 4px 8px 16px;
+        }
+
+        .button {
+            margin-top: 20px;
+            background-color: #D32F2F;
+            padding: 10px 20px;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;  
+        }
+
+        .button:hover {
+            background-color: #D32F2F;
+            background:-webkit-linear-gradient(top right, rgb(47, 21, 161), #ddb918);
+        }
+
+        .details {
+            display: none; 
+            background-color: #F5F5F5;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            text-align: left;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            align-items: center;
+            display: flex;
+            border: 2px solid;
+            background:-webkit-linear-gradient(top right, rgb(141, 240, 49), #217cf3);
+        }
+        .details img {
+            max-width: 150px;
+            margin-right: 20px;
+        }
+
+        .section {
+            margin-top: 40px;
+        }
+
+        .arrow {
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .arrow.down {
+            transform: rotate(0deg);
+        }
+
+        .arrow.up {
+            transform: rotate(180deg);
+        }
+
+        .back-button {
+            margin-top: 20px;
+            background-color: #D32F2F;
+            padding: 10px 20px;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            text-align: center;
+            display: inline-block;
+        }
+
+        .back-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script>
+        function toggleDetails(encargado) {
+            var details = document.getElementById(encargado);
+            var arrow = document.getElementById(`arrow-${encargado}`);
+            if (details.style.display === "none" || details.style.display === "") {
+                details.style.display = "flex";
+                arrow.classList.remove("down");
+                arrow.classList.add("up");
+            } else {
+                details.style.display = "none";
+                arrow.classList.remove("up");
+                arrow.classList.add("down");
+            }
+        }
+        window.onload = function() {
+            var detailsElements = document.querySelectorAll('.details');
+            detailsElements.forEach(function(detail) {
+                detail.style.display = 'none';
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <h1>Encargados</h1>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <div class="button" onclick="toggleDetails('sistemas')">
+                Encargado de Telecomunicaciones
+                <span id="arrow-sistemas" class="arrow down">▼</span>
+            </div>
+            <div class="details" id="sistemas">
+                <img src="2/Telecomunciaciones.jpg" alt="Ingeniería en Telecomunicaciones"> 
+                <div>
+                    <p>El Ingeniero en Telecomunicaciones puede encargarse de diseñar, implementar y 
+                        mantener las redes locales (LAN) y las redes de área amplia (WAN) que conectan las computadoras y otros dispositivos dentro de los laboratorios y en toda la universidad.</p>
+                    <p>Aseguran que los laboratorios y otros espacios de la universidad tengan acceso a internet de manera confiable y con la mejor configuración posible.</p>  
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="button" onclick="toggleDetails('industrial')">
+                Encargado de Ingeniería Industrial
+                <span id="arrow-industrial" class="arrow down">▼</span>
+            </div>
+            <div class="details" id="industrial">
+                <img src="2/Industrial2.jpg" alt="Ingeniería Industrial"> 
+                <div>
+                    <p>El Ingeniero Industrial puede encargarse de optimizar los procesos dentro de los laboratorios, 
+                        asegurando que los recursos (como equipos de cómputo, personal, y materiales) se utilicen de manera eficiente.</p>
+                    <p>También se encarga de mejorar la distribución de los equipos y las áreas dentro de los laboratorios para hacer un uso más eficiente del espacio.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="button" onclick="toggleDetails('electronica')">
+                Encargado de Redes Industriales
+                <span id="arrow-electronica" class="arrow down">▼</span>
+            </div>
+            <div class="details" id="electronica">
+                <img src="2/Redes industriales.jpg" alt="Redes industriales"> 
+                <div>
+                    <p>Establecer redes de comunicación para la interconexión de dispositivos, sensores, 
+                        actuadores, y sistemas de control en fábricas o instalaciones industriales. Esto incluye redes como Ethernet/IP, Profinet, Modbus, entre otras.</p>
+                    <p>El Ingeniero en Redes Industriales se encarga de asegurar que los sistemas de control y las redes de comunicación estén completamente integrados, lo que permite un flujo de trabajo fluido y eficiente.</p>
+                </div>
+            </div>
+        </div>
+        <a href="index.html">
+            <div class="back-button">Volver</div>
+        </a>
+    </div>
+</body>
+</html>

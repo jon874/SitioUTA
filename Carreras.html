@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carreras - UTA</title>
+    <style>
+        body {
+            background-color: #E0E0E0;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url("2/uta.jpg"); 
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            background-color: #D32F2F;
+            padding: 20px;
+            border-radius: 10px;
+            transition: transform 1s ease-in-out;
+        }
+            .header:hover {
+    transform: rotate(5deg);
+}
+        h1 {
+            color: white;
+            font-size: 3rem;
+            margin: 0;
+            border-color:rgb(23, 255, 43);
+            border-style: dotted ;
+            border-width: 2px 4px 8px 16px;
+        }
+        .button {
+            margin-top: 20px;
+            background-color: #D32F2F;
+            padding: 10px 20px;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .button:hover {
+            background-color: #D32F2F;
+            background:-webkit-linear-gradient(45deg, rgb(49, 164, 240), #b4f321);
+        }
+        .details {
+            display: none; 
+            background-color: #F5F5F5;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            text-align: left;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            align-items: center;
+            text-align: center;
+            margin: 30px;
+            padding: 15px;
+            border: 2px solid;
+            background:-webkit-linear-gradient(45deg, rgb(42, 255, 156), #6b2fa3);
+        }
+        .details img {
+            max-width: 150px;
+            margin-right: 20px;
+        }
+        .section {
+            margin-top: 40px;
+        }
+        .arrow {
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+        .arrow.down {
+            transform: rotate(0deg);
+        }
+        .arrow.up {
+            transform: rotate(180deg);
+        }
+        .back-button {
+            margin-top: 20px;
+            background-color: #D32F2F;
+            padding: 10px 20px;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            text-align: center;
+            display: inline-block;
+        }
+        .back-button:hover {
+            background-color: #D32F2F;
+        }
+    </style>
+    <script>
+        function toggleDetails(carrera) {
+            var details = document.getElementById(carrera);
+            var arrow = document.getElementById(`arrow-${carrera}`);
+            if (details.style.display === "none" || details.style.display === "") {
+                details.style.display = "flex";
+                arrow.classList.remove("down");
+                arrow.classList.add("up");
+            } else {
+                details.style.display = "none";
+                arrow.classList.remove("up");
+                arrow.classList.add("down");
+            }
+        }
+    </script>
+</head>
+<body>
+    <div>
+    </div>
+    <div class="header">
+        <h1>Carreras</h1>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <div class="button" onclick="toggleDetails('sistemas')">
+                Ingeniería en Sistemas
+                <span id="arrow-sistemas" class="arrow down">▼</span>
+            </div>
+            <div class="details" id="sistemas">
+                <img src="2/Sistemas.jpg" alt="Ingeniería en Sistemas"> 
+                <div>
+                    <p>La Ingeniería en Sistemas es una carrera universitaria que se enfoca en el diseño, desarrollo y gestión de sistemas informáticos, 
+                        los cuales son fundamentales para el funcionamiento de las empresas, instituciones y otras organizaciones.</p>
+                    <p>Áreas de estudio:</p>
+                    <ul>
+                        <li>Programación (Java, Python, C++, etc.)</li>
+                        <li>Bases de Datos</li>
+                        <li>Redes de Computadoras</li>
+                        <li>Desarrollo de Software</li>
+                        <li>Seguridad Informática</li>
+                        <li>Inteligencia Artificial</li>
+                        <li>Gestión de Proyectos Tecnológicos</li>
+                    </ul>    
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="button" onclick="toggleDetails('industrial')">
+                Ingeniería Industrial
+                <span id="arrow-industrial" class="arrow down">▼</span>
+            </div>
+            <div class="details" id="industrial">
+                <img src="2/industrial.jpg" alt="Ingeniería Industrial"> 
+                <div>
+                    <p>La ingeniería industrial es una disciplina que se encarga de optimizar los procesos de una empresa. Los ingenieros industriales diseñan, gestionan y mejoran los sistemas de las 
+                        organizaciones para aumentar su productividad y eficiencia.</p>
+                    <p>Áreas de estudio:</p>
+                    <ul>
+                        <li>Optimización de procesos</li>
+                        <li>Gestión de la calidad</li>
+                        <li>Gestión de la cadena de suministro</li>
+                        <li>Análisis de costos y toma de decisiones</li>
+                        <li>Ergonomía y seguridad industrial</li>
+                        <li>Gestión de proyectos</li>
+                        <li>Tecnologías de la información y automatización</li>
+                        <li>Investigación operativa y simulación</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="button" onclick="toggleDetails('electronica')">
+                Ingeniería Electrónica
+                <span id="arrow-electronica" class="arrow down">▼</span>
+            </div>
+            <div class="details" id="electronica">
+                <img src="2/electronica.jpg" alt="Ingeniería Electrónica"> 
+                <div>
+                    <p>La Ingeniería Electrónica es una rama de la ingeniería que se centra en el diseño, desarrollo y mantenimiento de dispositivos electrónicos y 
+                        sistemas que utilizan componentes eléctricos y electrónicos para operar.</p>
+                    <p>Áreas de estudio:</p>
+                    <ul>
+                        <li>Circuitos Electrónicos</li>
+                        <li>Microelectrónica</li>
+                        <li>Telecomunicaciones</li>
+                        <li>Sistemas de Control</li>
+                        <li>Instrumentación y Medición</li>
+                        <li>Robótica</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <a href="index.html">
+            <div class="back-button">Volver</div>
+        </a>
+    </div>
+</body>
+</html>
